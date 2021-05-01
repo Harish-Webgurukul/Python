@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registeration Form</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+                        background-color: orange;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Registeration form</h2>
+        <form method="post" action="/getdata">
+            
+            <p> <input type="text" name="fname" placeholder="First Name"></p>
+            <p> <input type="text" name="lname" placeholder="Last Name"></p>
+            <p> <input type="text" name="email" placeholder="Email"></p>
+            <p> <input type="password" name="password" placeholder="Password"></p>
+            <p> <input type="text" name="mobile" placeholder="Mobile"></p>
+            <input type="submit" value="Register">
+        </form>
+        <p><a href="/login"> Login </a></p>
+    </body>
+</html>

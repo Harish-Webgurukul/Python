@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Form</title>
+    </head>
+    <body>
+        <h2>Edit form</h2>
+        <form method="post" action="/update">
+ 
+            <p> <input type="text" name="email" value="{{ result['email'] }}"></p>
+            
+            <p> <input type="password" name="password" value="{{ result['password'] }}"></p>
+            
+            <p> <input type="text" name="city" value="{{ result['city'] }}"></p>
+            
+            <p> <input type="text" name="mobile" value="{{ result['mobile'] }}"></p>
+            <input type="submit" value="Update">
+        </form>
+    </body>
+</html>

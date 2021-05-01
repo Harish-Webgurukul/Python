@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2 align="center">Welcome to Register</h2>
+<div class="login-form">
+	<form action="/getdata" method="post">
+		<p> <input type="text" name="username" placeholder="Username"></p>
+		<p> <input type="email" name="email" placeholder="Email"></p>
+		<p> <input type="password" name="password" placeholder="Password"></p>
+		<p> <input type="text" name="city" placeholder="City"></p>
+		<p> <input type="submit" value="Register"></p>
+	</form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2 align="center">Welcome to edit File</h2>
+<div class="login-form">
+	<form action="/update" method="post">
+		<input type="hidden" name="id" value="{{data[0]}}">
+		<p> <input type="text" name="username" placeholder="Username" value="{{ data[1] }}"></p>
+		<p> <input type="email" name="email" placeholder="Email" value="{{ data[2] }}"></p>
+		<p> <input type="password" name="password" placeholder="Password" value="{{ data[3] }}"></p>
+		<p> <input type="text" name="city" placeholder="City" value="{{ data[4] }}"></p>
+		<p> <input type="submit" value="Update"></p>
+	</form>
+</div>
+
+
+{% endblock %}

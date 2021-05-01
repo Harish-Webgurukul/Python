@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Images</title>
+	 <style type="text/css">
+            body{
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+	<p> <a href="/imgupload"> Upload Image</a></p>
+	<p align="right"><a href="/logout">Logout</a></p>
+		<table border="2" align="center">
+			<tr>
+				<th>Id</th>
+				.<th>Category</th>
+				<th>Image</th>
+				
+				<th colspan="2">Action</th>
+			</tr>
+				{% for data in result %}
+				<tr>
+					<td>{{ data['id'] }}</td>		
+					
+					<td> {{ data['category_name']}}</td>
+					<td> 
+						<img src="{{ data['image_path']}}" height="100">
+
+						<p><small> {{ data['image_name'] }} </small></p>
+					</td>					
+					<td><a href="/delete?id={{ data['id'] }}">Delete</a></td>	
+				</tr>
+				{% endfor %}
+		</table>
+</body>
+</html>

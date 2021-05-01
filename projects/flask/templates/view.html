@@ -1,0 +1,35 @@
+{{results }}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Data</title>
+</head>
+<body>
+	<h2 align="center">View Data</h2>
+	<p align="center"> <a href="/home"> Register </a></p>
+
+	<table border="1" align="center" bgcolor="orange" cellpadding="5" cellspacing="5">
+		<tr>
+			<th>Id</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>City</th>
+			<th colspan="2">Action</th>
+		</tr>
+		{% for data in results %}
+		<tr>
+			 <td>{{ data['id'] }}</td>
+			 <td>{{ data['username'] }}</td>
+			 <td>{{ data['email'] }}</td>
+			 <td>{{ data['password'] }}</td>
+			 <td>{{ data['city_name'] }}</td>
+			 <td> <a href="/edit?id={{ data[0] }}">Edit</a> </td>
+			 <td> <a href="/delete?id={{ data[0] }}">Delete</a> </td>
+		</tr>
+		{% endfor %}
+	
+	</table>
+	
+</body>
+</html>

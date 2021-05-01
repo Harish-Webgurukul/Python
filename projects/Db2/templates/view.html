@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Dataa</title>
+</head>
+<body>
+	<p> <a href="/register"> Insert Data</a></p>
+		<table border="2">
+			<tr>
+				<th>Id</th>
+				<th>Email</th>
+				<th>Password</th>
+				<th>City</th>
+				<th>Mobile</th>
+				<th colspan="2">Action</th>
+			</tr>
+				{% for data in result %}
+				<tr>
+					<td>{{ data['id'] }}</td>		
+					<td>{{ data['email'] }}</td>		
+					<td>{{ data['password'] }}</td>		
+					<td>{{ data['city'] }}</td>		
+					<td>{{ data['mobile'] }}</td>		
+					<td><a href="/edit?id={{ data['id'] }}">Edit</a></td>	
+					<td><a href="/delete?id={{ data['id'] }}">Delete</a></td>	
+				</tr>
+				{% endfor %}
+		</table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>View Gallery</title>
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<p> <a href="/upload">Upload </a> </p>
+			{% for row in data: %}
+					<div class="img-div">
+						<img src="static/images/{{ row[1] }}" height="100">
+						<p> {{row[1]}}</p>
+					</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>

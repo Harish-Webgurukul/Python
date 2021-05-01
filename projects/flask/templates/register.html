@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<style type="text/css">
+
+			.container{
+				height: 300px;
+				width: 300px;
+				margin: 0 auto;
+				background-color: orange;
+				color: white;
+				padding: 100px;
+			}
+			a{
+				color: white;
+				text-decoration: none;
+				border: 5px solid white;
+				padding: 5px;
+
+			}
+		</style>
+	</head>
+	<body>
+		
+	<div class="container">
+		<h3 align="center">Registeration Form</h3>
+		<hr color="white" width="50%">
+		<br>
+		<p align="center"> <a href="/view"> view Data </a></p>
+		<form method="post" action="/getdata">
+			<p>Username <input type="text" name="username"></p>
+			<p>Email <input type="email" name="email"></p>
+			<p>Password <input type="password" name="password"></p>
+			<p>City 
+				<select name="city">
+				<option value="1"> Wardha </option>
+				<option value="2"> Nagpur </option>
+				<option value="3"> yavatmal </option>
+				<option value="4"> Amravati </option>
+				</select></p>
+			<p align="center"><input type="submit" value="Register"></p>
+		</form>
+	</div>
+		
+	</body>
+</html>

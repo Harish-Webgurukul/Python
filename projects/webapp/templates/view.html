@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block body %}
+
+	<h2 align="center">Welcome to View Page</h2>
+	<table cellspacing="5" cellpadding="5" align="center" border="1" rules="all" bordercolor="white">
+
+		<tr>
+			<th>Sr No</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>City</th>
+			<th>Action</th>
+		</tr>
+		
+		{% for row in data %}
+			 <tr>
+				<td>{{ row[0] }}</td>
+				<td>{{ row[1] }}</td>
+				<td>{{ row[2] }}</td>
+				<td>{{ row[3] }}</td>
+				<td>
+					<form method="post" action="/edit">
+						<input type="hidden" name="id" value="{{row[0]}}">
+						<input type="submit" value="Edit">
+					</form>
+
+					<form method="post" action="/delete">
+						<input type="hidden" name="id" value="{{row[0]}}">
+						<input type="submit" value="Delete">
+					</form>
+
+				</td>
+			</tr>
+		{% endfor %}
+		
+	</table>
+{% endblock %}

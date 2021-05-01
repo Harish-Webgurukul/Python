@@ -1,0 +1,27 @@
+<html>  
+<head>  
+    <title>upload</title>  
+    <style type="text/css">
+    	body{
+    		text-align: center;
+    	}
+    	.container{
+    		width: 50%;
+    		margin: 0 auto;
+    		background: orange;
+    		border: 2px solid black;
+    		color: white;
+    	}
+    </style>
+</head>  
+<body>  
+	<div class="container">
+		<h2>Gallery</h2>
+	
+	    <form action = "/success" method = "post" enctype="multipart/form-data">  
+	        <input type="file" name="file" />  
+	        <input type = "submit" value="Upload">  
+	    </form> 
+    </div> 
+</body>  
+</html>  

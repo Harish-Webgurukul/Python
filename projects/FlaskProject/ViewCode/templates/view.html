@@ -1,0 +1,32 @@
+{{ results }}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View File</title>
+</head>
+<body>
+	<h2 align="center">View data</h2>
+	<table border="2" cellspacing="5" cellpadding="5" align="center">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>City Name</th>
+			<th colspan="2">Action</th>
+		</tr>
+		{% for data in results %}
+		<tr>
+			<td> {{ data[0] }}</td>
+			<td> {{ data[1] }}</td>
+			<td> {{ data[2] }}</td>
+			<td> {{ data[3] }}</td>
+			<td> {{ data[5] }}</td>
+			<td>  <a href="/edit?id={{ data[0] }}"> Edit </a></td>
+			<td>  <a href="/delete?id={{ data[0] }}"> Delete </a></td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
